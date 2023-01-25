@@ -1,0 +1,16 @@
+$BLURPLE: #7289da;
+$DARK_BUT_NOT_BLACK: #2c2f33;
+$GREY_KINDA_DARK: #424549;
+
+body {
+  background-color: $GREY_KINDA_DARK;
+  color: lighten($DARK_BUT_NOT_BLACK, 80%);
+}
+
+.header-details {
+  color: $BLURPLE;
+}
+
+.text-areas > textarea {
+  background-color: lighten($GREY_KINDA_DARK, 50%);
+}
