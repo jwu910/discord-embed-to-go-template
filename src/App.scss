@@ -7,8 +7,13 @@ body {
   color: lighten($DARK_BUT_NOT_BLACK, 80%);
 }
 
-.header-details {
-  color: $BLURPLE;
+
+.header-details  {
+  margin: 12px 0;
+  a {
+    color: $BLURPLE;
+
+  }
 }
 
 .text-areas > textarea {

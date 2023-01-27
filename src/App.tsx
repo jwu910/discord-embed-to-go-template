@@ -57,10 +57,42 @@ function App() {
 
   return (
     <Box sx={{ padding: 2, margin: "auto", width: "70%" }}>
-      <div className="header-details"></div>
-      <h2>Embed to Go Templates</h2>
-      <p>Convert JSON to go template structs for Yagpdb</p>
-      <Stack sx={{ margin: "auto" }} className="text-areas" direction="row" spacing={3}>
+      <div className="header-details">
+        <h2>Embed to Go Templates</h2>
+        <p>Convert JSON to go template structs for Yagpdb</p>
+        <p>
+          Visit one of the embed builder sites and paste the{" "}
+          <strong>JSON</strong> for a <strong>single</strong> Embed on the left.
+        </p>
+        <ol>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://discohook.org/"
+            >
+              Discohook
+            </a>
+          </li>
+
+          <li>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://embed.dan.onl/"
+            >
+              Embed.dan.onl
+            </a>
+          </li>
+        </ol>
+      </div>
+
+      <Stack
+        sx={{ margin: "auto" }}
+        className="text-areas"
+        direction="row"
+        spacing={3}
+      >
         <textarea
           style={{ flexGrow: 1 }}
           cols={50}
