@@ -90,7 +90,7 @@ function App() {
       <Stack sx={{ margin: "auto" }} className="text-areas" spacing={3}>
         <textarea
           cols={50}
-          rows={30}
+          rows={20}
           id="input"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
@@ -98,7 +98,7 @@ function App() {
 
         <textarea
           cols={50}
-          rows={30}
+          rows={20}
           id="output"
           value={outputValue}
         ></textarea>
