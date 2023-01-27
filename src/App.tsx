@@ -56,10 +56,10 @@ function App() {
   }, [inputValue]);
 
   return (
-    <Box sx={{ padding: 2, margin: "auto", width: "70%" }}>
+    <Box sx={{ padding: 2, margin: "auto", width: "70%", height: "100vh" }}>
       <div className="header-details">
         <h2>Embed to Go Templates</h2>
-        <p>Convert JSON to go template structs for Yagpdb</p>
+        <p>Convert JSON to Go template structs for Yagpdb</p>
         <p>
           Visit one of the embed builder sites and paste the{" "}
           <strong>JSON</strong> for a <strong>single</strong> Embed on the left.
@@ -87,14 +87,8 @@ function App() {
         </ol>
       </div>
 
-      <Stack
-        sx={{ margin: "auto" }}
-        className="text-areas"
-        direction="row"
-        spacing={3}
-      >
+      <Stack sx={{ margin: "auto" }} className="text-areas" spacing={3}>
         <textarea
-          style={{ flexGrow: 1 }}
           cols={50}
           rows={30}
           id="input"
@@ -103,13 +97,21 @@ function App() {
         ></textarea>
 
         <textarea
-          style={{ flexGrow: 1 }}
           cols={50}
           rows={30}
           id="output"
           value={outputValue}
         ></textarea>
       </Stack>
+      <footer>
+        <p>
+          © {new Date().getFullYear()} The EmbedToGo Author. EmbedToGo is not
+          affiliated with Discord.
+        </p>
+        <p>
+          This website is made available under the terms of the MIT license.
+        </p>
+      </footer>
     </Box>
   );
 }
