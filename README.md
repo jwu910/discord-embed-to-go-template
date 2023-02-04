@@ -1,46 +1,24 @@
-# Getting Started with Create React App
+# Discord Embed to Go
+Simple syntax converter webapp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple web ui to convert a single Discord Embed JSON into Go template syntax intended for use with [Yagpdb Bot](https://yagpdb.xyz/).
 
-## Available Scripts
+## Usage
+Head to your favorite Discord Embed Builder.
+1. Personal recommendation is [Discohook](https://discohook.org)
+2. View your embed's JSON and copy JUST a single embed object.
+    ```json
+    "embeds": [
+      { "title": "Your embed title" }, // <-- just one at a time
+      {},
+    ]
+    ```
+3. Go to [live site](https://jwu910.github.io/embed-to-go)
+4. Paste your embed object in the first box
+5. Copy and paste your output into your Yagpdb custom command
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Disclaimer
+EmbedToGo is not affiliated with [Discord](https://discord.gg)
