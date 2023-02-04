@@ -34,20 +34,20 @@ export const handleObjectEmbed = (
     fieldValue: object,
 ): string => {
     if (field === "fields") {
-        let obj = '( sdict\n'
+        let objectEmbedStr = '( sdict\n'
         Object.entries(fieldValue).map(([key, value]) => {
-            obj = obj + `"${key}" "${value}"\n`
+            objectEmbedStr = objectEmbedStr + `"${key}" "${value}"\n`
         });
-        obj = obj + ' )\n'
-        return `${obj}`
+        objectEmbedStr = objectEmbedStr + ' )\n'
+        return `${objectEmbedStr}`
     } else {
-        let obj = '( sdict\n';
+        let objectEmbedStr = '( sdict\n';
         let dictString = '';
         Object.entries(fieldValue).map(([key, value]) => { 
             dictString = dictString + `"${key}" "${value}"\n`
         });
-        obj = obj + dictString + ")\n";
-        return `"${field}" ${obj}`
+        objectEmbedStr = objectEmbedStr + dictString + ")\n";
+        return `"${field}" ${objectEmbedStr}`
     }
 }
 
@@ -56,12 +56,12 @@ export const handleArrayEmbed = (
     field: string,
     fieldValue: IField[]
 ): string => {
-    let slice = '( cslice\n'
+    let sliceEmbedStr = '( cslice\n'
     fieldValue.forEach(i => {
         let objectEmbed = handleObjectEmbed(field, i)
-        slice = slice + objectEmbed;
+        sliceEmbedStr = sliceEmbedStr + objectEmbed;
     });
-    return `"${field}" ${slice}`;
+    return `"${field}" ${sliceEmbedStr}`;
 };
 
 export const parseKeys = (embed: Record<string, any>): string => {
@@ -73,15 +73,15 @@ export const parseKeys = (embed: Record<string, any>): string => {
                 case "fields":
                     return handleArrayEmbed(key, embed[key]);
                 case "author":
-                case "image":
                 case "footer":
+                case "image":
+                case "provider":
                 case "thumbnail":
                 case "video":
-                case "provider":
                     return handleObjectEmbed(key, embed[key]);
+                case "description":
                 case "title":
                 case "type":
-                case "description":
                 case "url":
                     return handleStringEmbed(key, embed[key]);
             }
