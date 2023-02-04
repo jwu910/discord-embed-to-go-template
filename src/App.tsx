@@ -14,6 +14,7 @@ export interface IAuthor {
   url: string;
   icon_url: string;
 }
+
 export interface IField {
   name: string;
   value: string;
