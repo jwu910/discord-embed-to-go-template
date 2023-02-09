@@ -35,7 +35,7 @@ export const handleObjectEmbed = (
 ): string => {
   if (field === "fields") {
     let objectEmbedStr = "( sdict\n";
-    Object.entries(fieldValue).map(([key, value]) => {
+    Object.entries(fieldValue).forEach(([key, value]) => {
       objectEmbedStr = objectEmbedStr + `"${key}" "${value}"\n`;
     });
     objectEmbedStr = objectEmbedStr + " )\n";
@@ -43,7 +43,7 @@ export const handleObjectEmbed = (
   } else {
     let objectEmbedStr = "( sdict\n";
     let dictString = "";
-    Object.entries(fieldValue).map(([key, value]) => {
+    Object.entries(fieldValue).forEach(([key, value]) => {
       dictString = dictString + `"${key}" "${value}"\n`;
     });
     objectEmbedStr = objectEmbedStr + dictString + ")\n";
