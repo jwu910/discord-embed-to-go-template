@@ -63,7 +63,7 @@ function App() {
         <p>Convert JSON to Go template structs for Yagpdb</p>
         <p>
           Visit one of the embed builder sites and paste the{" "}
-          <strong>JSON</strong> for a <strong>single</strong> Embed on the left.
+          <strong>JSON</strong> for a <strong>single</strong> Embed in the first box.
         </p>
         <ol>
           <li>
