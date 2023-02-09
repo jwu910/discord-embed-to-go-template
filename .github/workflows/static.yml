@@ -16,21 +16,11 @@ permissions:
   id-token: write
 
 # Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+#concurrency:
+  #group: "pages"
+  #cancel-in-progress: true
 
 jobs:
-  build:
-    environment:
-      name: github-pages
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install
-        run:
-          npm ci
-          npm build
-          
   # Single deploy job since we're just deploying
   deploy:
     environment:
@@ -42,6 +32,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v3
+      - name: Install
+        run: |
+          npm ci
+          npm build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
